@@ -16,5 +16,6 @@ steps:
         "push",
         "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
       ]
+logsBucket: 'gs://bucket-quickstart_microservicios-nestjs-455721'
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
