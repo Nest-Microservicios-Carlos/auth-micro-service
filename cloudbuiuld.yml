@@ -17,4 +17,4 @@ steps:
         "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
       ]
 options:
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+  logging: CLOUD_LOGGING_ONLY
