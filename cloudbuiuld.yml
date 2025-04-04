@@ -1,0 +1,18 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
+        "-f",
+        "dockerfile.prod",
+        "--platform=linux/amd64",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
+      ]
