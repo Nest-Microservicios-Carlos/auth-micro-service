@@ -6,9 +6,9 @@ steps:
         "-t",
         "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
         "-f",
-        "dockerfile.prod",
+        "auth-micro-service/dockerfile.prod",
         "--platform=linux/amd64",
-        ".",
+        "auth-micro-service",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args:
@@ -18,5 +18,4 @@ steps:
       ]
 # serviceAccount: projects/microservicios-nestjs-455721/serviceAccounts/892858150248-compute@developer.gserviceaccount.com
 options:
-  logging: GCS_ONLY
-logsBucket: 'gs://nest-ms-logs'
+  logging: CLOUD_LOGGING_ONLY
