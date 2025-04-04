@@ -19,4 +19,4 @@ steps:
 # serviceAccount: projects/microservicios-nestjs-455721/serviceAccounts/892858150248-compute@developer.gserviceaccount.com
 options:
   logging: GCS_ONLY
-logsBucket: gs://nest-ms-logs
+logsBucket: 'gs://nest-ms-logs'
