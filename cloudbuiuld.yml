@@ -16,6 +16,7 @@ steps:
         "push",
         "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
       ]
-serviceAccount: projects/microservicios-nestjs-455721/serviceAccounts/892858150248-compute@developer.gserviceaccount.com
+# serviceAccount: projects/microservicios-nestjs-455721/serviceAccounts/892858150248-compute@developer.gserviceaccount.com
 options:
-  logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
+logsBucket: gs://nest-ms-logs
