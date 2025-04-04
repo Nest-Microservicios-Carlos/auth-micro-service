@@ -1,0 +1,21 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
+        "-f",
+        "auth-micro-service/dockerfile.prod",
+        "--platform=linux/amd64",
+        "auth-micro-service",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
+      ]
+# serviceAccount: projects/microservicios-nestjs-455721/serviceAccounts/892858150248-compute@developer.gserviceaccount.com
+options:
+  logging: CLOUD_LOGGING_ONLY
