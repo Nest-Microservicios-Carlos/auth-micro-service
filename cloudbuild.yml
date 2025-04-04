@@ -6,9 +6,9 @@ steps:
         "-t",
         "northamerica-south1-docker.pkg.dev/microservicios-nestjs-455721/nest-registry/auth-micro-service-prod",
         "-f",
-        "auth-micro-service/dockerfile.prod",
+        "dockerfile.prod",
         "--platform=linux/amd64",
-        "auth-micro-service",
+        ".",
       ]
   - name: "gcr.io/cloud-builders/docker"
     args:
